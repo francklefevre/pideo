@@ -1,0 +1,7 @@
+{
+  "mqtt_server": "",
+  "mqtt_port": 1883,
+  "mqtt_topic": "",
+  "videos_dir": "videos",
+  "player_cmd": "ffmpeg -re -i '{video_path}' -f null -"
+}

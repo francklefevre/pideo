@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@openai/codex": "^0.1.2505291658",
+    "codex": "^0.2.3",
+    "connect": "^1.9.2"
+  }
+}

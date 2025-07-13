@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+*.err.txt
+*.history.txt
+secret.json
+param.json
+node_modules/
+package-lock.json
+videos/*.mp4
