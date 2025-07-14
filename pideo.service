@@ -1,6 +1,9 @@
 [Unit]
 Description=Pideo automatic video player service
 After=network.target
+# Prevent the graphical desktop session from starting when Pideo is enabled.
+Before=graphical.target
+Conflicts=graphical.target
 
 [Service]
 Type=simple

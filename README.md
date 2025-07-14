@@ -83,10 +83,14 @@ Install and enable the service to run on boot:
 ```bash
 sudo cp pideo.service /etc/systemd/system/pideo.service
 sudo systemctl daemon-reload
+# Make the Pi boot to the console only (no graphical desktop)
+sudo systemctl set-default multi-user.target
 sudo systemctl enable pideo.service
 sudo systemctl start pideo.service
 ```
 Edit `/etc/systemd/system/pideo.service` to adjust paths if needed.
+
+The provided service file explicitly `Conflicts=graphical.target`, ensuring that when the service is running the X-Window desktop will not start. Disabling the desktop frees GPU memory and CPU cycles for video playback.
 
 ## Logging and Error Handling
 - Errors and exceptions are logged to `pideo.py.err.txt` (overwritten at each start).
